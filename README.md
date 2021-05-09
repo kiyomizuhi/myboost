@@ -1,3 +1,3 @@
-# dt_ensemble_scratch
+# myboost
 
-## implementing ensemble algos based on decision trees such as random forest and boosting.
+## implementing ml algos such as decision trees, random forest and boosting with a sklearn-like style.
