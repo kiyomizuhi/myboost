@@ -2,12 +2,15 @@ import numpy as np
 
 
 class BaseCriterion:
-    pass
+    def __init__(self):
+        pass
 
 
 class BaseRegressorCriterion(BaseCriterion):
-    pass
+    def __init__(self):
+        pass
 
 
-class MSE(BaseRegressorCriterion):
-    pass
+class MeanSquaredError(BaseRegressorCriterion):
+    def __init__(self):
+        pass
