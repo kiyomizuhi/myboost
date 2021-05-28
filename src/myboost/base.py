@@ -1,7 +1,7 @@
 import abc
 import inspect
 
-import numpy as np
+import numpy
 
 
 class BaseMixin:
@@ -43,7 +43,7 @@ class RegressorMixin:
 
     _estimator_type = "regressor"
 
-    def score(self, X: np.array, y: np.array):
+    def score(self, X: numpy.array, y: numpy.array):
         from .metrics import mse
 
         y_pred = self.predict(X)

@@ -1,8 +1,14 @@
+LOSS_REG = ["MSE"]
+
+
 class BaseLoss:
     def __init__(self):
         pass
 
     def fit(self):
+        pass
+
+    def predict(self):
         pass
 
     def gradient(self):
@@ -12,11 +18,11 @@ class BaseLoss:
         pass
 
 
-class BaseRegressorCriterion(BaseLoss):
+class BaseRegressorLoss(BaseLoss):
     def __init__(self):
         pass
 
 
-class MeanSquaredError(BaseRegressorCriterion):
+class MeanSquaredError(BaseRegressorLoss):
     def __init__(self):
         pass
