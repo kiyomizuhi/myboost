@@ -1,3 +1,7 @@
+[flake8]
+max-line-length = 100
+max-complexity = 18
+
 [tool.black]
 line-length = 100
 target-version = ['py38']
