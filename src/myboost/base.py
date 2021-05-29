@@ -4,7 +4,7 @@ import inspect
 import numpy
 
 
-class BaseMixin:
+class BaseEstimatorMixin:
     """Base class for all estimators in myboost."""
 
     def __repr__(self):
@@ -50,14 +50,11 @@ class RegressorMixin:
         return mse(y, y_pred)
 
 
-class BaseRegressor(RegressorMixin, BaseMixin, metaclass=abc.ABCMeta):
-    def __init__(self):
+class BaseRegressor(RegressorMixin, BaseEstimatorMixin, metaclass=abc.ABCMeta):
+    @abs.abstractmethod
+    def fit(self):
         pass
 
     @abs.abstractmethod
-    def fit(self):
-        NotImplementedError()
-
-    @abs.abstractmethod
     def predict(self):
-        NotImplementedError()
+        pass
